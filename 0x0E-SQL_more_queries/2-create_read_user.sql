@@ -5,9 +5,9 @@ CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
 CREATE USER IF NOT EXISTS'user_0d_2'@'localhost';
 -- Next we grant him all privileges
 USE hbtn_0d_2;
-GRANT SELECT ON * TO 'user_0d_1'@'localhost';
+GRANT SELECT ON hbtn_0d_2.* TO 'user_0d_2'@'localhost';
 -- Lastly we give them a password
-ALTER USER 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_2_pwd';
+ALTER USER 'user_0d_2'@'localhost' IDENTIFIED BY 'user_0d_2_pwd';
 -- Then we flush privileges
 FLUSH PRIVILEGES;
 
