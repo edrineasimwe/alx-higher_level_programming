@@ -3,7 +3,7 @@
 import MySQLdb
 import sys
 
-"""This is a python file that returns the value from the 
+"""This is a python file that returns the value from the
 database. Though just a few values"""
 usr = sys.argv[1]
 pasw = sys.argv[2]
