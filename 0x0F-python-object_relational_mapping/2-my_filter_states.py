@@ -12,13 +12,12 @@ if __name__ == '__main__':
     from the database.
     """
 
-    nm = argv[4]
     db = MySQLdb.connect(host="localhost", user=argv[1], port=3306,
                          passwd=argv[2], db=argv[3])
 
     cur = db.cursor()
     sql = f"""SELECT * FROM states WHERE
-    name LIKE BINARY '{nm}' ORDER BY states.id ASC;"""
+    name LIKE BINARY '{argv[4]}' ORDER BY states.id ASC;"""
     cur.execute(sql)
     rows = cur.fetchall()
 
