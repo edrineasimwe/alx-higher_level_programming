@@ -19,7 +19,7 @@ if __name__ == '__main__':
     sql = """SELECT * FROM states WHERE
     name LIKE BINARY %(name)s
     ORDER BY states.id ASC;"""
-    cur.execute(sql ,{'name':argv[4]})
+    cur.execute(sql, {'name': argv[4]})
     rows = cur.fetchall()
 
     for row in rows:
